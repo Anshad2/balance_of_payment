@@ -27,5 +27,6 @@ urlpatterns = [
     path("transactions/<int:pk>/change/",views.TransactionEditView.as_view(),name="transaction-edit"),
     path("signup/",views.SignUpView.as_view(),name="signup"),
     path("signin/",views.SignInView.as_view(),name="signin"),
+    path("signout/",views.SignOutView.as_view(),name="signout"),
     
 ]
