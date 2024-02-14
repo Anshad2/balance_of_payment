@@ -207,7 +207,7 @@ class SignUpView(View):
 class SignInView(View):
     def get(self,request,*args,**kwargs):
         form=LoginForm()
-        return render(request,"login.html",{"form":form})
+        return render(request,"signin.html",{"form":form})
     def post(self,request,*args,**kwargs):
         form=LoginForm(request.POST)
         if form.is_valid():
@@ -221,7 +221,7 @@ class SignInView(View):
                 # request.user => anonymus user(user has no session)
                 return redirect("transaction-list")
         print("invalid")
-        return render(request,"login.html",{"form":form})
+        return render(request,"signin.html",{"form":form})
 
 
 # signout
